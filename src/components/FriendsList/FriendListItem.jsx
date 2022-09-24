@@ -1,13 +1,20 @@
 import css from "../FriendsList/FriendsList.module.css";
+import PropTypes from "prop-types";
+import { Span, ListItem, Name, Image } from "components/FriendsList/Friends.styled"
+
+
 
 
 
 export const FriendListItem = ({ isOnline, name, id, avatar }) => {
-    return (<li className={css.item} key={id}>
-            <span className={css.status}>{ isOnline}</span>
-            <img className={css.avatar} src={avatar} alt={name}  width="48" />
-            <p className={css.name}>{name}</p>
-        </li>)
+    return (<ListItem key={id}>
+            <Span type={isOnline}>{isOnline}</Span>
+            <Image src={avatar} alt={name}  />
+            <Name>{name}</Name>
+        </ListItem>)
     
 }
 
+FriendListItem.propType = {
+    
+  type: PropTypes.bool.isRequired}

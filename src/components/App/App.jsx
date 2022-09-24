@@ -6,11 +6,15 @@ import { Profile } from 'components/Profile/Profile';
 import { Statistics } from "components/Statistics/Statistics"
 import { FriendList } from 'components/FriendsList/FriendsList';
 import {TransactionHistory} from "components/TransactionHistory/TransactionHistory"
-
+// import { Container } from "components/App/App.styled"
+import { Box } from '../Box';
 
 export const App = () => {
-  return (<>
-      <Profile
+  return (
+
+<Box display="flex" flexDirection="column" p={10} as="main"> 
+      
+<Profile
   username={user.username}
   tag={user.tag}
   location={user.location}
@@ -20,11 +24,11 @@ export const App = () => {
 
 <Statistics title="Upload stats" stats={data} />
 
-<FriendList friends={friendsList} />;
-    
-<TransactionHistory items={transactions} />;
-  
-  </>
+<FriendList friends={friendsList} /> 
+
+<TransactionHistory items={transactions} />
+
+</Box>
 
 
   );

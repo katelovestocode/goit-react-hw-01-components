@@ -1,35 +1,35 @@
 import PropTypes from 'prop-types';
 import css from "../Profile/Profile.module.css"
+import {Container, Description, List, ListItem, SpanText, SpanNumber, Text, Image} from "components/Profile/Profile.styled"
 
 export const Profile = ({ username, tag, location, avatar, stats: { followers, views, likes } }) => {
     return (
-    <div className={css.profile}>
-    <div className={css.description}>
-    <img
+    <Container>
+    <Description>
+    <Image
       src={avatar}
       alt={tag}
-      className={css.avatar}
     />
-    <p className={css.name}>{username}</p>
-    <p className={css.tag}>@{tag}</p>
-    <p className={css.location}>{location}</p>
-  </div>
+    <Text>{username}</Text>
+    <Text>@{tag}</Text>
+    <Text>{location}</Text>
+  </Description>
 
-  <ul className={css.stats}>
-    <li>
-      <span className={css.label}>Followers</span>
-      <span className={css.quantity}>{followers}</span>
-    </li>
-    <li>
-      <span className={css.label}>Views</span>
-      <span className={css.quantity}>{views}</span>
-    </li>
-    <li>
-      <span className={css.label}>Likes</span>
-      <span className={css.quantity}>{likes}</span>
-    </li>
-  </ul>
-</div>)}
+  <List>
+    <ListItem>
+      <SpanText>Followers</SpanText>
+      <SpanNumber>{followers}</SpanNumber>
+    </ListItem>
+    <ListItem>
+      <SpanText>Views</SpanText>
+      <SpanNumber>{views}</SpanNumber>
+    </ListItem>
+    <ListItem>
+      <SpanText>Likes</SpanText>
+      <SpanNumber>{likes}</SpanNumber>
+    </ListItem>
+  </List>
+</Container>)}
 
 Profile.propTypes = {
     username: PropTypes.string.isRequired,
