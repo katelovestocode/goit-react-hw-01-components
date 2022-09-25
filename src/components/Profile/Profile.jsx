@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
 import css from "../Profile/Profile.module.css"
 import {Container, Description, List, ListItem, SpanText, SpanNumber, Text, Image} from "components/Profile/Profile.styled"
+import { Box } from '../Box';
 
 export const Profile = ({ username, tag, location, avatar, stats: { followers, views, likes } }) => {
     return (
-    <Container>
+    <Box width={350} height={350} p={4}  mr="auto" ml="auto" border='2px solid #EEEDE7' as="div">
     <Description>
     <Image
       src={avatar}
@@ -29,7 +30,7 @@ export const Profile = ({ username, tag, location, avatar, stats: { followers, v
       <SpanNumber>{likes}</SpanNumber>
     </ListItem>
   </List>
-</Container>)}
+</Box>)}
 
 Profile.propTypes = {
     username: PropTypes.string.isRequired,

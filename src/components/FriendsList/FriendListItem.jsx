@@ -8,7 +8,7 @@ import { Span, ListItem, Name, Image } from "components/FriendsList/Friends.styl
 
 export const FriendListItem = ({ isOnline, name, id, avatar }) => {
     return (<ListItem key={id}>
-            <Span type={isOnline}>{isOnline}</Span>
+            <Span status={isOnline}>{isOnline}</Span>
             <Image src={avatar} alt={name}  />
             <Name>{name}</Name>
         </ListItem>)
@@ -17,4 +17,4 @@ export const FriendListItem = ({ isOnline, name, id, avatar }) => {
 
 FriendListItem.propType = {
     
-  type: PropTypes.bool.isRequired}
+  status: PropTypes.bool.isRequired}

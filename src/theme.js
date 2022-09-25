@@ -6,7 +6,7 @@ export const theme = {
     ivory: '#EEEDE7',
     boxColor: '#E7D2CC',
   },
-  space: [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50],
+  space: [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 'auto'],
   fonts: {
     body: 'system-ui, sans-serif',
     heading: 'system-ui, sans-serif',

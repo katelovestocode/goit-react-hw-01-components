@@ -1,11 +1,13 @@
 import styled from '@emotion/styled'
 
-export const Container = styled.section`
-padding:  ${p => p.theme.space[6]}px;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-conten: center;`
+
+//// Used Box instead
+// export const Container = styled.section`
+// padding:  ${p => p.theme.space[6]}px;
+// display: flex;
+// flex-direction: column;
+// align-items: center;
+// justify-conten: center;`
 
 export const Title = styled.h2`
 font-size: ${p => p.theme.fontSizes.sm};`

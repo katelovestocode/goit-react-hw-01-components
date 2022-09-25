@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
 import css from "../Statistics/Statistics.module.css"
 import {Container, Title, List, ListItem, Label, Percentage} from "../Statistics/Statistics.styled"
-
+import { Box } from '../Box';
 
 export const Statistics = ({title, stats}) => {
     return (
-  <Container>
+  <Box display="flex" alignItems='center'  justifyContent="center"  flexDirection='column' p={4} as="section">
             {{title} && <Title> {title} </Title>}
         <List>
                 
@@ -16,7 +16,7 @@ export const Statistics = ({title, stats}) => {
             </ListItem>
                 ))}
         </List>
-   </Container>
+   </Box>
 )}
 
 

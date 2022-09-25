@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 
-
+//// Used Box instead
 // export const List = styled.ul`
 // display: flex;
 // padding: ${p => p.theme.space[6]}px;
@@ -21,7 +21,7 @@ width: 15px;
 height: 15px;
 border-radius: ${p => p.theme.radii.normal}; 
 margin-right: ${p => p.theme.space[2]}px;
-background-color: ${props =>  props.type ? props.theme.colors.green  :   props.theme.colors.red }`
+background-color: ${props =>  props.status ? props.theme.colors.green  :   props.theme.colors.red }`
 
 export const Name = styled.p`
 font-size:  ${p => p.theme.fontSizes.sm};

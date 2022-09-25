@@ -7,7 +7,7 @@ import { Box } from '../Box';
 
 export const FriendList = ({ friends }) => {
     return (
-        <Box display="flex" p={4} as="ul" border="normal" borderColor="ivory">
+        <Box display="flex" p={4} border='2px solid #EEEDE7' as="ul" >
             {friends.map(({ id, avatar, name, isOnline }) => (<FriendListItem avatar={avatar} name={name} isOnline={isOnline} key={id} />))}</Box>)
 }
 

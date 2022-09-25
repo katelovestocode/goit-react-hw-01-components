@@ -1,13 +1,13 @@
 import styled from '@emotion/styled'
 
-export const Container = styled.div`
-width: 350px;
-height: 350px;
-padding: ${p => p.theme.space[4]}px;
-border: ${p => p.theme.borders.normal} ${p => p.theme.colors.ivory}; 
-margin-right: auto;
-margin-left: auto;
-`
+//// Used Box instead
+// export const Container = styled.div`
+// width: 350px;
+// height: 350px;
+// padding: ${p => p.theme.space[4]}px;
+// border: ${p => p.theme.borders.normal} ${p => p.theme.colors.ivory}; 
+// margin-right: auto;
+// margin-left: auto;`
 
 export const Description = styled.div`
 text-align: center;
